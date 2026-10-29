@@ -1,0 +1,2458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GARV EDITS — Short-Form Video Editor for Creators, Brands & Agencies</title>
+  <meta name="description"
+    content="Freelance short-form video editing for creators, brands and agencies in the UK and US: Reels, Shorts, talking-head videos, podcast clips and white-label support.">
+  <meta property="og:title" content="GARV EDITS — Your Content. Better Edited.">
+  <meta property="og:description" content="Short-form video editing for creators, brands and agencies.">
+  <meta property="og:type" content="website">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎬%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+  <style>
+    :root {
+      --bg: #0B0B0F;
+      --bg2: #12121A;
+      --blue: #3B82F6;
+      --pur: #8B5CF6;
+      --pur2: #A78BFA;
+      --tx: #F5F5F7;
+      --mu: #A1A1AA;
+      --bd: #272733;
+      --r: 16px;
+      --g: linear-gradient(135deg, #8B5CF6, #3B82F6)
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 76px;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px)
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--tx);
+      font: 400 16px/1.65 Inter, system-ui, sans-serif;
+      overflow-x: hidden
+    }
+
+    h1,
+    h2,
+    h3,
+    .logo {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      line-height: 1.1;
+      letter-spacing: -.02em
+    }
+
+    a {
+      color: inherit
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--pur2);
+      outline-offset: 3px
+    }
+
+    .w {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 20px
+    }
+
+    section {
+      padding: 88px 0
+    }
+
+    .alt {
+      background: var(--bg2)
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      margin-bottom: 14px;
+      max-width: 18ch
+    }
+
+    .lead {
+      color: var(--mu);
+      max-width: 58ch;
+      margin-bottom: 40px
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 12px;
+      font: 600 15px Inter, sans-serif;
+      text-decoration: none;
+      border: 1px solid var(--bd);
+      background: transparent;
+      color: var(--tx);
+      cursor: pointer;
+      transition: transform .15s, border-color .15s
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: var(--pur2)
+    }
+
+    .btn.p {
+      background: var(--g);
+      border-color: transparent;
+      color: #fff
+    }
+
+    .btn.sm {
+      padding: 9px 16px;
+      font-size: 14px
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(11, 11, 15, .92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--bd)
+    }
+
+    header .w {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-decoration: none
+    }
+
+    .logo b {
+      background: var(--g);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    nav ul {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+      padding: 0;
+      align-items: center
+    }
+
+    nav a {
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--mu);
+      font-size: 15px
+    }
+
+    nav a:hover,
+    nav a.on {
+      color: var(--tx)
+    }
+
+    nav a.on {
+      background: rgba(124, 58, 237, .18)
+    }
+
+    #mb {
+      display: none;
+      background: none;
+      border: 1px solid var(--bd);
+      color: var(--tx);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 18px;
+      cursor: pointer
+    }
+
+    @media(max-width:900px) {
+      #mb {
+        display: block
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: var(--bg2);
+        border-bottom: 1px solid var(--bd);
+        padding: 12px 20px 20px
+      }
+
+      nav.open {
+        display: block
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: stretch
+      }
+
+      nav a {
+        display: block;
+        padding: 12px
+      }
+    }
+
+    .hero {
+      padding: 64px 0 40px
+    }
+
+    .hg {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 48px;
+      align-items: center
+    }
+
+    @media(max-width:900px) {
+      .hg {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .eb {
+      color: var(--pur2);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: .08em;
+      margin-bottom: 18px
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6.5vw, 5rem);
+      margin-bottom: 20px
+    }
+
+    .hero p.s {
+      color: var(--mu);
+      font-size: 1.1rem;
+      max-width: 52ch;
+      margin-bottom: 28px
+    }
+
+    .row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .av {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      font-size: 14px;
+      color: var(--mu)
+    }
+
+    .av i {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, .2)
+    }
+
+    .strip {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--bd);
+      color: var(--mu);
+      font-size: 14px
+    }
+
+    .strip span {
+      border: 1px solid var(--bd);
+      border-radius: 99px;
+      padding: 6px 14px
+    }
+
+    .scroll {
+      display: block;
+      text-align: center;
+      color: var(--mu);
+      font-size: 13px;
+      margin-top: 28px;
+      text-decoration: none
+    }
+
+    .vid {
+      position: relative;
+      border-radius: var(--r);
+      overflow: hidden;
+      border: 1px solid var(--bd);
+      background: var(--bg2);
+      aspect-ratio: 9/16;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      padding: 0;
+      color: inherit;
+      text-align: left
+    }
+
+    .vid.hero-v {
+      aspect-ratio: 16/10;
+      max-height: 460px
+    }
+
+    .vid video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .th {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 16px;
+      background: radial-gradient(circle at 30% 20%, var(--c1), transparent 60%), radial-gradient(circle at 80% 90%, var(--c2), transparent 55%), var(--bg2)
+    }
+
+    .th small {
+      font-size: 12px;
+      color: #fff;
+      background: rgba(0, 0, 0, .55);
+      padding: 5px 10px;
+      border-radius: 8px
+    }
+
+    .pl {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--g);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 30px rgba(124, 58, 237, .45)
+    }
+
+    .pl:after {
+      content: "";
+      border-left: 18px solid #fff;
+      border-top: 11px solid transparent;
+      border-bottom: 11px solid transparent;
+      margin-left: 5px
+    }
+
+    .dur {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: 12px;
+      background: rgba(0, 0, 0, .6);
+      padding: 3px 9px;
+      border-radius: 99px
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 28px
+    }
+
+    .tabs button {
+      padding: 9px 18px;
+      border-radius: 99px;
+      border: 1px solid var(--bd);
+      background: none;
+      color: var(--mu);
+      font: 500 14px Inter, sans-serif;
+      cursor: pointer
+    }
+
+    .tabs button[aria-pressed=true] {
+      background: var(--g);
+      color: #fff;
+      border-color: transparent
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px
+    }
+
+    #pg {
+      grid-template-columns: repeat(4, 1fr)
+    }
+
+    @media(max-width:1000px) {
+      #pg {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media(max-width:520px) {
+      #pg {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--bd);
+      border-radius: var(--r);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .card .cat {
+      color: var(--pur2);
+      font-size: 13px;
+      font-weight: 600
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      line-height: 1.25
+    }
+
+    .card p {
+      color: var(--mu);
+      font-size: 14px
+    }
+
+    .tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap
+    }
+
+    .tags span {
+      font-size: 12px;
+      color: var(--mu);
+      border: 1px solid var(--bd);
+      border-radius: 6px;
+      padding: 2px 8px
+    }
+
+    .cta {
+      margin-top: 48px;
+      text-align: center;
+      padding: 40px 20px;
+      border: 1px solid var(--bd);
+      border-radius: var(--r);
+      background: var(--bg2)
+    }
+
+    .cta h3 {
+      font-size: 1.6rem;
+      margin-bottom: 16px
+    }
+
+    .g2 {
+      grid-template-columns: repeat(2, 1fr)
+    }
+
+    .g3 {
+      grid-template-columns: repeat(3, 1fr)
+    }
+
+    .g4 {
+      grid-template-columns: repeat(4, 1fr)
+    }
+
+    @media(max-width:900px) {
+
+      .g2,
+      .g3,
+      .g4 {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .svc {
+      background: var(--bg);
+      border: 1px solid var(--bd);
+      border-radius: var(--r);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .svc h3 {
+      font-size: 1.4rem
+    }
+
+    .svc p {
+      color: var(--mu)
+    }
+
+    ul.chk {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 7px;
+      font-size: 15px
+    }
+
+    ul.chk li {
+      padding-left: 24px;
+      position: relative
+    }
+
+    ul.chk li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: 700
+    }
+
+    .ideal {
+      font-size: 14px;
+      color: var(--mu);
+      border-top: 1px solid var(--bd);
+      padding-top: 12px;
+      margin-top: auto
+    }
+
+    .price {
+      background: var(--bg2);
+      border: 1px solid var(--bd);
+      border-radius: var(--r);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative
+    }
+
+    .price.pop {
+      border-color: var(--pur);
+      box-shadow: 0 0 0 1px var(--pur), 0 20px 60px rgba(124, 58, 237, .18)
+    }
+
+    .badge {
+      position: absolute;
+      top: -13px;
+      left: 30px;
+      background: var(--g);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 99px
+    }
+
+    .amt {
+      font: 700 3rem 'Space Grotesk', sans-serif
+    }
+
+    .amt small {
+      font: 400 15px Inter;
+      color: var(--mu)
+    }
+
+    .price .btn {
+      margin-top: auto;
+      text-align: center
+    }
+
+    .notes {
+      margin-top: 36px;
+      color: var(--mu);
+      font-size: 14px;
+      columns: 2;
+      column-gap: 40px
+    }
+
+    .notes li {
+      margin-bottom: 6px;
+      break-inside: avoid
+    }
+
+    @media(max-width:800px) {
+      .notes {
+        columns: 1
+      }
+    }
+
+    .steps {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+      counter-reset: s
+    }
+
+    .steps:before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 5%;
+      right: 5%;
+      height: 2px;
+      background: var(--bd)
+    }
+
+    .steps li {
+      position: relative;
+      counter-increment: s
+    }
+
+    .steps li:before {
+      content: counter(s);
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--g);
+      font: 700 1.1rem 'Space Grotesk';
+      margin-bottom: 16px;
+      position: relative
+    }
+
+    .steps h3 {
+      font-size: 1.15rem;
+      margin-bottom: 8px
+    }
+
+    .steps p {
+      color: var(--mu);
+      font-size: 15px
+    }
+
+    @media(max-width:900px) {
+      .steps {
+        grid-template-columns: 1fr
+      }
+
+      .steps:before {
+        top: 0;
+        bottom: 0;
+        left: 22px;
+        right: auto;
+        width: 2px;
+        height: auto
+      }
+
+      .steps li {
+        padding-left: 64px
+      }
+
+      .steps li:before {
+        position: absolute;
+        left: 0;
+        top: 0
+      }
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 48px;
+      align-items: start
+    }
+
+    @media(max-width:900px) {
+      .about {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .pf {
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+
+    .about p {
+      color: var(--mu);
+      margin-bottom: 14px
+    }
+
+    .car {
+      position: relative
+    }
+
+    .tr {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding-bottom: 12px
+    }
+
+    .tc {
+      flex: 0 0 min(420px, 85%);
+      scroll-snap-align: start;
+      background: var(--bg2);
+      border: 1px dashed var(--bd);
+      border-radius: var(--r);
+      padding: 28px;
+      display: grid;
+      gap: 10px;
+      align-content: start
+    }
+
+    .tc q {
+      font-size: 1.1rem;
+      color: var(--mu);
+      quotes: none
+    }
+
+    .ctl {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px
+    }
+
+    .ctl button {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--bd);
+      background: none;
+      color: var(--tx);
+      font-size: 18px;
+      cursor: pointer
+    }
+
+    details {
+      border-bottom: 1px solid var(--bd)
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 20px 0;
+      font: 500 1.05rem 'Space Grotesk';
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px
+    }
+
+    summary::-webkit-details-marker {
+      display: none
+    }
+
+    summary:after {
+      content: "+";
+      color: var(--pur2);
+      font-size: 1.4rem;
+      line-height: 1
+    }
+
+    details[open] summary:after {
+      content: "−"
+    }
+
+    details p {
+      color: var(--mu);
+      padding: 0 0 20px;
+      max-width: 70ch
+    }
+
+    .cg {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 48px
+    }
+
+    @media(max-width:900px) {
+      .cg {
+        grid-template-columns: 1fr
+      }
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    .f {
+      display: grid;
+      gap: 6px
+    }
+
+    .f.full {
+      grid-column: 1/-1
+    }
+
+    @media(max-width:600px) {
+      form {
+        grid-template-columns: 1fr
+      }
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 500
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--bd);
+      border-radius: 10px;
+      padding: 12px;
+      color: var(--tx);
+      font: inherit
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--pur2);
+      outline: none
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical
+    }
+
+    .st {
+      grid-column: 1/-1;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 15px;
+      display: none
+    }
+
+    .st.ok {
+      display: block;
+      background: rgba(34, 197, 94, .12);
+      border: 1px solid #22c55e
+    }
+
+    .st.er {
+      display: block;
+      background: rgba(239, 68, 68, .12);
+      border: 1px solid #ef4444
+    }
+
+    .ci {
+      display: grid;
+      gap: 12px;
+      color: var(--mu);
+      margin-top: 24px
+    }
+
+    .ci a {
+      color: var(--tx);
+      text-decoration: underline;
+      text-decoration-color: var(--pur2)
+    }
+
+    .fin {
+      text-align: center;
+      background: radial-gradient(ellipse at 50% 120%, rgba(124, 58, 237, .45), transparent 60%), radial-gradient(ellipse at 20% 120%, rgba(59, 130, 246, .35), transparent 55%), var(--bg)
+    }
+
+    .fin h2 {
+      margin: 0 auto 14px;
+      max-width: 16ch;
+      font-size: clamp(2.2rem, 5vw, 3.8rem)
+    }
+
+    .fin p {
+      color: var(--mu);
+      margin-bottom: 28px
+    }
+
+    .fin .row {
+      justify-content: center
+    }
+
+    footer {
+      border-top: 1px solid var(--bd);
+      padding: 56px 0 32px;
+      color: var(--mu);
+      font-size: 14px
+    }
+
+    .fg {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 32px
+    }
+
+    @media(max-width:800px) {
+      .fg {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    footer h4 {
+      color: var(--tx);
+      margin-bottom: 12px;
+      font-size: 14px
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 8px
+    }
+
+    footer a {
+      text-decoration: none
+    }
+
+    footer a:hover {
+      color: var(--tx)
+    }
+
+    .copy {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--bd)
+    }
+
+    dialog {
+      border: 1px solid var(--bd);
+      border-radius: var(--r);
+      background: var(--bg2);
+      color: var(--tx);
+      padding: 20px;
+      width: min(520px, 94vw);
+      max-height: 92vh;
+      overflow: auto
+    }
+
+    dialog::backdrop {
+      background: rgba(0, 0, 0, .8)
+    }
+
+    dialog video {
+      width: 100%;
+      max-height: 60vh;
+      border-radius: 12px;
+      background: #000;
+      margin: 12px 0
+    }
+
+    .mr {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+      font-size: 14px
+    }
+
+    .x {
+      float: right;
+      background: none;
+      border: 1px solid var(--bd);
+      color: var(--tx);
+      border-radius: 8px;
+      padding: 6px 12px;
+      cursor: pointer
+    }
+
+    .ph {
+      padding: 30px 10px;
+      text-align: center;
+      color: var(--mu);
+      border: 1px dashed var(--pur2);
+      border-radius: 12px;
+      margin: 12px 0
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      * {
+        transition: none !important
+      }
+    }
+
+    #prog {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background: var(--g);
+      transform-origin: 0 50%;
+      transform: scaleX(0);
+      z-index: 50
+    }
+
+    #cd,
+    #cr {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      display: none;
+      border-radius: 50%
+    }
+
+    #cd {
+      width: 8px;
+      height: 8px;
+      margin: -4px 0 0 -4px;
+      background: var(--g)
+    }
+
+    #cr {
+      width: 38px;
+      height: 38px;
+      margin: -19px 0 0 -19px;
+      border: 1.5px solid var(--pur2);
+      display: none;
+      place-items: center;
+      font: 600 11px Inter, sans-serif;
+      color: #fff;
+      transition: width .25s, height .25s, margin .25s, background .25s, border-color .25s, opacity .25s
+    }
+
+    #cr.hov {
+      width: 60px;
+      height: 60px;
+      margin: -30px 0 0 -30px;
+      background: rgba(124, 58, 237, .18);
+      border-color: var(--blue)
+    }
+
+    #cr.play {
+      width: 84px;
+      height: 84px;
+      margin: -42px 0 0 -42px;
+      background: var(--g);
+      border-color: transparent
+    }
+
+    #cr.dn {
+      width: 28px;
+      height: 28px;
+      margin: -14px 0 0 -14px
+    }
+
+    @media(hover:hover) and (pointer:fine) {
+
+      body.cur,
+      body.cur * {
+        cursor: none
+      }
+
+      body.cur input,
+      body.cur textarea,
+      body.cur select {
+        cursor: text
+      }
+
+      body.cur #cd,
+      body.cur #cr {
+        display: grid
+      }
+    }
+
+    .glow {
+      position: absolute;
+      inset: -10% 0 auto 30%;
+      height: 520px;
+      background: radial-gradient(circle at 40% 40%, rgba(124, 58, 237, .35), transparent 55%), radial-gradient(circle at 70% 60%, rgba(59, 130, 246, .28), transparent 55%);
+      filter: blur(40px);
+      z-index: -1;
+      animation: fl 12s ease-in-out infinite alternate;
+      pointer-events: none
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden
+    }
+
+    @keyframes fl {
+      to {
+        transform: translate(-60px, 40px) scale(1.15)
+      }
+    }
+
+    @keyframes up {
+      from {
+        opacity: 0;
+        transform: translateY(28px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes pop {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(.96)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(168, 85, 247, .55)
+      }
+
+      100% {
+        box-shadow: 0 0 0 22px rgba(168, 85, 247, 0)
+      }
+    }
+
+    @keyframes bob {
+      50% {
+        transform: translateY(7px)
+      }
+    }
+
+    .hero .eb,
+    .hero h1,
+    .hero p.s,
+    .hero .row,
+    .hero .av,
+    .hero-v {
+      animation: up .8s cubic-bezier(.2, .7, .2, 1) both
+    }
+
+    .hero h1 {
+      animation-delay: .1s
+    }
+
+    .hero p.s {
+      animation-delay: .22s
+    }
+
+    .hero .row {
+      animation-delay: .34s
+    }
+
+    .hero .av {
+      animation-delay: .44s
+    }
+
+    .hero-v {
+      animation-delay: .3s
+    }
+
+    .pl {
+      animation: pulse 2s infinite
+    }
+
+    .vid:hover .pl {
+      transform: translate(-50%, -50%) scale(1.12)
+    }
+
+    .pl {
+      transition: transform .25s
+    }
+
+    .vid .th {
+      transition: transform .6s
+    }
+
+    .vid:hover .th,
+    .vid:hover video {
+      transform: scale(1.06)
+    }
+
+    .vid video {
+      transition: transform .6s
+    }
+
+    .scroll {
+      animation: bob 2s ease-in-out infinite
+    }
+
+    .card {
+      animation: pop .5s both
+    }
+
+    .card:nth-child(2) {
+      animation-delay: .06s
+    }
+
+    .card:nth-child(3) {
+      animation-delay: .12s
+    }
+
+    .card:nth-child(4) {
+      animation-delay: .18s
+    }
+
+    .card:nth-child(n+5) {
+      animation-delay: .24s
+    }
+
+    .card,
+    .svc,
+    .price {
+      transition: transform .3s, border-color .3s, box-shadow .3s
+    }
+
+    .card:hover,
+    .svc:hover,
+    .price:hover {
+      transform: translateY(-6px);
+      border-color: var(--pur);
+      box-shadow: 0 18px 50px rgba(124, 58, 237, .18)
+    }
+
+    .btn.p {
+      position: relative;
+      overflow: hidden
+    }
+
+    .btn.p:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -80%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .35), transparent);
+      transform: skewX(-20deg);
+      transition: left .6s
+    }
+
+    .btn.p:hover:after {
+      left: 130%
+    }
+
+    nav a:not(.btn) {
+      position: relative
+    }
+
+    nav a:not(.btn):after {
+      content: "";
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 4px;
+      height: 2px;
+      background: var(--g);
+      transform: scaleX(0);
+      transition: transform .3s
+    }
+
+    nav a:not(.btn):hover:after {
+      transform: scaleX(1)
+    }
+
+    .strip span {
+      transition: background .25s, color .25s, transform .25s
+    }
+
+    .strip span:hover {
+      background: rgba(124, 58, 237, .18);
+      color: var(--tx);
+      transform: translateY(-2px)
+    }
+
+    .rv {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity .7s, transform .7s cubic-bezier(.2, .7, .2, 1)
+    }
+
+    .rv.in {
+      opacity: 1;
+      transform: none
+    }
+
+    .steps li:before {
+      transition: transform .4s
+    }
+
+    .steps li:hover:before {
+      transform: scale(1.15) rotate(8deg)
+    }
+
+    details {
+      transition: background .25s
+    }
+
+    details[open] {
+      background: rgba(124, 58, 237, .06)
+    }
+
+    details p {
+      animation: up .35s both
+    }
+
+    summary:after {
+      transition: transform .3s
+    }
+
+    details[open] summary:after {
+      transform: rotate(180deg)
+    }
+
+    input,
+    select,
+    textarea {
+      transition: border-color .2s, box-shadow .2s
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, .25)
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      * {
+        animation: none !important
+      }
+
+      .rv {
+        opacity: 1;
+        transform: none
+      }
+
+      .glow {
+        display: none
+      }
+    }
+
+    /* ===== NEON LAYER ===== */
+    :root {
+      --nb: #4F9BFF;
+      --np: #B66DFF;
+      --ng: 0 0 12px rgba(79, 155, 255, .55), 0 0 32px rgba(182, 109, 255, .35)
+    }
+
+    ::selection {
+      background: var(--pur);
+      color: #fff
+    }
+
+    body {
+      background-image: radial-gradient(circle at 85% 0, rgba(124, 58, 237, .10), transparent 40%), radial-gradient(circle at 0 60%, rgba(59, 130, 246, .08), transparent 40%);
+      background-attachment: fixed
+    }
+
+    #prog {
+      box-shadow: 0 0 12px var(--nb), 0 0 22px var(--np)
+    }
+
+    #cd {
+      box-shadow: 0 0 10px var(--nb), 0 0 20px var(--np)
+    }
+
+    #cr {
+      box-shadow: 0 0 14px rgba(182, 109, 255, .6), inset 0 0 12px rgba(79, 155, 255, .35);
+      border-color: var(--np)
+    }
+
+    #cr.play {
+      box-shadow: 0 0 30px var(--np), 0 0 60px rgba(79, 155, 255, .5)
+    }
+
+    .logo b {
+      filter: drop-shadow(0 0 8px rgba(182, 109, 255, .7))
+    }
+
+    header {
+      border-bottom-color: rgba(124, 58, 237, .35);
+      box-shadow: 0 1px 24px rgba(124, 58, 237, .15)
+    }
+
+    nav a.on {
+      box-shadow: inset 0 0 0 1px rgba(182, 109, 255, .5), 0 0 16px rgba(124, 58, 237, .35);
+      color: #fff
+    }
+
+    nav a:not(.btn):after {
+      box-shadow: 0 0 8px var(--np)
+    }
+
+    .hero:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-image: linear-gradient(rgba(124, 58, 237, .14) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, .12) 1px, transparent 1px);
+      background-size: 56px 56px;
+      -webkit-mask-image: radial-gradient(ellipse at 60% 30%, #000, transparent 70%);
+      mask-image: radial-gradient(ellipse at 60% 30%, #000, transparent 70%)
+    }
+
+    h1 {
+      text-shadow: 0 0 28px rgba(124, 58, 237, .55), 0 0 60px rgba(59, 130, 246, .3)
+    }
+
+    h2 {
+      text-shadow: 0 0 24px rgba(124, 58, 237, .4)
+    }
+
+    .eb {
+      color: var(--np);
+      text-shadow: 0 0 12px rgba(182, 109, 255, .8)
+    }
+
+    .av i {
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, .2), 0 0 14px #22c55e;
+      animation: pulse2 1.8s infinite
+    }
+
+    @keyframes pulse2 {
+      50% {
+        box-shadow: 0 0 0 7px rgba(34, 197, 94, 0), 0 0 22px #22c55e
+      }
+    }
+
+    .btn {
+      border-color: rgba(182, 109, 255, .45);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+    }
+
+    .btn:hover {
+      border-color: var(--np);
+      box-shadow: 0 0 18px rgba(182, 109, 255, .5), inset 0 0 14px rgba(124, 58, 237, .2)
+    }
+
+    .btn.p {
+      box-shadow: 0 0 18px rgba(79, 155, 255, .45), 0 0 40px rgba(124, 58, 237, .35)
+    }
+
+    .btn.p:hover {
+      box-shadow: 0 0 26px rgba(79, 155, 255, .8), 0 0 60px rgba(168, 85, 247, .6)
+    }
+
+    .strip span {
+      border-color: rgba(79, 155, 255, .35)
+    }
+
+    .strip span:hover {
+      box-shadow: 0 0 16px rgba(79, 155, 255, .5);
+      border-color: var(--nb)
+    }
+
+    .vid {
+      border-color: rgba(124, 58, 237, .5);
+      box-shadow: 0 0 22px rgba(124, 58, 237, .22)
+    }
+
+    .vid:hover {
+      border-color: var(--np);
+      box-shadow: 0 0 34px rgba(182, 109, 255, .55), 0 0 70px rgba(79, 155, 255, .25)
+    }
+
+    .hero-v {
+      box-shadow: 0 0 40px rgba(124, 58, 237, .4), 0 0 90px rgba(59, 130, 246, .2)
+    }
+
+    .pl {
+      box-shadow: 0 0 24px var(--np), 0 0 50px rgba(79, 155, 255, .55)
+    }
+
+    .tabs button {
+      border-color: rgba(124, 58, 237, .4);
+      transition: box-shadow .25s, color .25s, border-color .25s
+    }
+
+    .tabs button:hover {
+      color: #fff;
+      border-color: var(--np);
+      box-shadow: 0 0 14px rgba(182, 109, 255, .45)
+    }
+
+    .tabs button[aria-pressed=true] {
+      box-shadow: 0 0 20px rgba(79, 155, 255, .6), 0 0 40px rgba(124, 58, 237, .4)
+    }
+
+    .card,
+    .svc,
+    .price {
+      border-color: rgba(124, 58, 237, .3)
+    }
+
+    .card:hover,
+    .svc:hover,
+    .price:hover {
+      border-color: var(--np);
+      box-shadow: 0 0 26px rgba(182, 109, 255, .4), 0 0 60px rgba(79, 155, 255, .15)
+    }
+
+    .card .cat,
+    .svc .cat {
+      color: var(--np);
+      text-shadow: 0 0 10px rgba(182, 109, 255, .6)
+    }
+
+    .tags span {
+      border-color: rgba(79, 155, 255, .3)
+    }
+
+    ul.chk li:before {
+      color: var(--nb);
+      text-shadow: 0 0 8px var(--nb)
+    }
+
+    .price.pop {
+      animation: neon 3s ease-in-out infinite alternate;
+      border-color: var(--np)
+    }
+
+    @keyframes neon {
+      from {
+        box-shadow: 0 0 0 1px var(--pur), 0 0 20px rgba(124, 58, 237, .45), 0 0 50px rgba(79, 155, 255, .15)
+      }
+
+      to {
+        box-shadow: 0 0 0 1px var(--np), 0 0 34px rgba(182, 109, 255, .7), 0 0 80px rgba(79, 155, 255, .35)
+      }
+    }
+
+    .badge {
+      box-shadow: 0 0 16px rgba(182, 109, 255, .8)
+    }
+
+    .amt {
+      text-shadow: 0 0 18px rgba(79, 155, 255, .6)
+    }
+
+    .cta {
+      border-color: rgba(124, 58, 237, .5);
+      box-shadow: 0 0 30px rgba(124, 58, 237, .18), inset 0 0 40px rgba(79, 155, 255, .05)
+    }
+
+    section+section {
+      position: relative
+    }
+
+    section+section:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--nb), var(--np), transparent);
+      box-shadow: 0 0 14px var(--np);
+      opacity: .7
+    }
+
+    .steps:before {
+      background: linear-gradient(90deg, var(--nb), var(--np));
+      box-shadow: 0 0 10px var(--np)
+    }
+
+    .steps li:before {
+      box-shadow: 0 0 18px var(--np), 0 0 36px rgba(79, 155, 255, .4)
+    }
+
+    .pf {
+      border-color: var(--np);
+      box-shadow: 0 0 24px rgba(182, 109, 255, .3), inset 0 0 30px rgba(124, 58, 237, .1)
+    }
+
+    .tc {
+      border-color: rgba(182, 109, 255, .45);
+      box-shadow: 0 0 18px rgba(124, 58, 237, .15)
+    }
+
+    .ctl button:hover {
+      border-color: var(--np);
+      box-shadow: 0 0 14px var(--np)
+    }
+
+    summary:after {
+      text-shadow: 0 0 10px var(--np)
+    }
+
+    details[open] {
+      box-shadow: inset 3px 0 0 var(--np), -8px 0 24px -12px var(--np)
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--np);
+      box-shadow: 0 0 0 1px var(--np), 0 0 18px rgba(182, 109, 255, .45)
+    }
+
+    .ci a {
+      text-shadow: 0 0 10px rgba(79, 155, 255, .5)
+    }
+
+    .fin h2 {
+      text-shadow: 0 0 30px rgba(182, 109, 255, .7), 0 0 70px rgba(79, 155, 255, .4)
+    }
+
+    footer {
+      border-top-color: rgba(124, 58, 237, .4);
+      box-shadow: 0 -10px 40px -20px rgba(124, 58, 237, .5)
+    }
+
+    dialog {
+      border-color: var(--np);
+      box-shadow: 0 0 40px rgba(182, 109, 255, .45)
+    }
+
+    /* UX helpers */
+    #fab {
+      position: fixed;
+      right: 16px;
+      bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+      z-index: 30;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: opacity .3s, transform .3s
+    }
+
+    #fab.show {
+      opacity: 1;
+      transform: none;
+      pointer-events: auto
+    }
+
+    #fab .top {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 1px solid var(--np);
+      background: rgba(16, 20, 38, .92);
+      color: #fff;
+      font-size: 18px;
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      box-shadow: 0 0 16px rgba(182, 109, 255, .5)
+    }
+
+    #fab .hm {
+      display: none
+    }
+
+    @media(max-width:900px) {
+      #fab .hm {
+        display: inline-block
+      }
+    }
+
+    header {
+      transition: box-shadow .3s
+    }
+
+    .skip {
+      position: absolute;
+      left: -999px;
+      top: 8px;
+      z-index: 100;
+      background: var(--pur);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px
+    }
+
+    .skip:focus {
+      left: 8px
+    }
+
+    /* testimonials */
+    .tc {
+      position: relative;
+      padding-top: 58px;
+      border-style: solid;
+      border-color: rgba(124, 58, 237, .35);
+      transition: border-color .3s, box-shadow .3s, transform .3s
+    }
+
+    .tc.rv {
+      opacity: 1;
+      transform: none
+    }
+
+    .tc:before {
+      content: "\201C";
+      position: absolute;
+      top: 10px;
+      left: 22px;
+      font: 700 4.5rem/1 'Space Grotesk', sans-serif;
+      background: var(--g);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    .tc:hover {
+      border-color: var(--np);
+      box-shadow: 0 0 24px rgba(182, 109, 255, .35)
+    }
+
+    .tc q {
+      font-size: 1rem;
+      color: #d4d4d8;
+      line-height: 1.65
+    }
+
+    .stars {
+      color: var(--np);
+      letter-spacing: 2px;
+      font-size: 15px
+    }
+
+    .tc figcaption {
+      border-top: 1px solid var(--bd);
+      padding-top: 12px
+    }
+
+    @media(min-width:901px) {
+      .tr {
+        display: block;
+        columns: 3;
+        column-gap: 20px;
+        overflow: visible
+      }
+
+      .tc {
+        margin-bottom: 20px;
+        break-inside: avoid
+      }
+
+      .tr:not(.all) .tc:nth-child(n+7) {
+        display: none
+      }
+
+      .ctl {
+        display: none
+      }
+    }
+
+    @media(max-width:900px) {
+      .tr.all {
+        flex-direction: column;
+        overflow: visible
+      }
+
+      .tr.all .tc {
+        flex: none;
+        width: 100%
+      }
+
+      .tr.all~.ctl {
+        display: none
+      }
+    }
+
+    #ta {
+      margin: 20px auto 0;
+      display: block
+    }
+
+    /* agency layer */
+    .mq {
+      overflow: hidden;
+      border-block: 1px solid rgba(124, 58, 237, .4);
+      background: var(--bg2);
+      padding: 16px 0;
+      box-shadow: 0 0 30px rgba(124, 58, 237, .15)
+    }
+
+    .mt {
+      display: flex;
+      width: max-content;
+      animation: mq 28s linear infinite
+    }
+
+    .mt span {
+      font: 700 clamp(1.1rem, 2.5vw, 1.7rem) 'Space Grotesk', sans-serif;
+      white-space: nowrap;
+      padding-right: 1.5rem;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--np);
+      letter-spacing: .04em
+    }
+
+    .mt span b {
+      color: var(--nb);
+      -webkit-text-stroke: 0;
+      text-shadow: 0 0 10px var(--nb)
+    }
+
+    @keyframes mq {
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    .rail {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 6px 2px 18px;
+      scrollbar-color: var(--pur) transparent
+    }
+
+    .rc {
+      flex: 0 0 clamp(170px, 22vw, 230px);
+      scroll-snap-align: start;
+      display: grid;
+      gap: 10px
+    }
+
+    .rc h3 {
+      font-size: .95rem;
+      line-height: 1.3
+    }
+
+    .rc .cat {
+      color: var(--np);
+      font-size: 12px;
+      font-weight: 600
+    }
+
+    .eng {
+      background: radial-gradient(ellipse at 50% 0, rgba(124, 58, 237, .22), transparent 60%), var(--bg)
+    }
+
+    .tile {
+      border: 1px solid rgba(124, 58, 237, .35);
+      border-radius: var(--r);
+      padding: 26px;
+      background: var(--bg2);
+      transition: transform .3s, box-shadow .3s, border-color .3s
+    }
+
+    .tile:hover {
+      transform: translateY(-6px);
+      border-color: var(--np);
+      box-shadow: 0 0 26px rgba(182, 109, 255, .4)
+    }
+
+    .tile i {
+      font: 700 2rem 'Space Grotesk', sans-serif;
+      font-style: normal;
+      background: var(--g);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 8px rgba(182, 109, 255, .6))
+    }
+
+    .tile h3 {
+      font-size: 1.15rem;
+      margin: 10px 0 8px
+    }
+
+    .tile p {
+      color: var(--mu);
+      font-size: 15px
+    }
+
+    .chips {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 28px
+    }
+
+    .chips span {
+      border: 1px solid rgba(79, 155, 255, .35);
+      border-radius: 99px;
+      padding: 6px 14px;
+      font-size: 14px;
+      color: var(--mu)
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      .mt {
+        animation: none
+      }
+    }
+
+    /* v2 */
+    h1 {
+      text-shadow: 0 0 40px rgba(139, 92, 246, .35)
+    }
+
+    h2 {
+      text-shadow: none
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#portfolio">Skip to portfolio</a>
+  <div id="fab"><a class="btn p sm hm" href="#contact">Let's Talk</a><a class="top" href="#home"
+      aria-label="Back to top">↑</a></div>
+  <div id="prog"></div>
+  <div id="cd"></div>
+  <div id="cr"></div>
+  <header>
+    <div class="w">
+      <a class="logo" href="#home">GARV <b>EDITS</b></a>
+      <button id="mb" aria-expanded="false" aria-controls="nav" aria-label="Open menu">☰</button>
+      <nav id="nav" aria-label="Main">
+        <ul>
+          <li><a href="#portfolio">Work</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how">Process</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="btn p sm" href="#contact">Let's Talk</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="glow"></div>
+      <div class="w">
+        <div class="hg">
+          <div>
+            <p class="eb">REELS • SHORTS • TALKING-HEAD • PODCASTS</p>
+            <h1>Your Content. Better Edited.</h1>
+            <p class="s">Short-form video editing for creators, brands and agencies. I turn raw footage into polished,
+              engaging videos built for social media.</p>
+            <div class="row"><a class="btn p" href="#portfolio">View My Work</a><a class="btn" href="#contact">Let's
+                Work Together</a></div>
+            <p class="av"><i></i>Available for freelance projects · UK &amp; US clients</p>
+          </div>
+          <button class="vid hero-v" id="hv" data-id="hero" aria-label="Play featured edit"></button>
+        </div>
+        <div class="strip"><span>Agencies</span><span>Creators</span><span>Personal brands</span><span>Podcast
+            teams</span></div>
+        <a class="scroll" href="#portfolio">Scroll to see the work ↓</a>
+      </div>
+    </section>
+
+    <div class="mq" aria-hidden="true">
+      <div class="mt"><span>REELS <b>✦</b> SHORTS <b>✦</b> TALKING-HEAD <b>✦</b> PODCAST CLIPS <b>✦</b> CAPTIONS
+          <b>✦</b> SOUND DESIGN <b>✦</b> </span><span>REELS <b>✦</b> SHORTS <b>✦</b> TALKING-HEAD <b>✦</b> PODCAST CLIPS
+          <b>✦</b> CAPTIONS <b>✦</b> SOUND DESIGN <b>✦</b> </span></div>
+    </div>
+    <section id="reels">
+      <div class="w">
+        <h2>Fresh From the Edit Bay.</h2>
+        <p class="lead">Portfolio concepts and spec edits. Tap any reel to watch it full size.</p>
+        <div class="rail" id="rail" tabindex="0" aria-label="Reels, scroll sideways"></div><a class="btn"
+          href="#portfolio">See All Work</a>
+      </div>
+    </section>
+    <section class="alt" id="portfolio">
+      <div class="w">
+        <h2>Selected Work.</h2>
+        <p class="lead">Portfolio concepts and spec edits that show my editing style. They are not paid client projects.
+        </p>
+        <div class="tabs" id="tabs" role="group" aria-label="Filter portfolio"></div>
+        <div class="grid" id="pg"></div>
+        <div class="cta">
+          <h3>Have a Project in Mind? Let's Edit It.</h3><a class="btn p" href="#contact">Start Your Project</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="w">
+        <h2>Editing Services Built Around Your Content</h2>
+        <p class="lead">Four focused services, each shaped around how the finished video will be watched.</p>
+        <div class="grid g2" id="sv"></div>
+      </div>
+    </section>
+
+    <section class="alt" id="pricing">
+      <div class="w">
+        <h2>Simple Pricing. Professional Editing.</h2>
+        <p class="lead">Starting prices to help you plan. Every project is quoted individually.</p>
+        <div class="grid g3" id="pr"></div>
+        <p style="margin-top:32px;color:var(--mu);font-size:14px;max-width:72ch">These are starting prices, not fixed
+          quotes. The final quote depends on footage length, complexity, deliverables, turnaround and revision
+          requirements.</p>
+        <div class="cta">
+          <h3>Need Multiple Videos or Monthly Editing?</h3>
+          <p style="color:var(--mu);margin-bottom:18px">Let's create a package around your content schedule.</p><a
+            class="btn p" href="#contact" data-pk="Custom Quote">Request a Custom Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="eng" id="engine">
+      <div class="w">
+        <h2>Your Monthly Video Engine. Done For You.</h2>
+        <p class="lead">Stop editing in bursts. Send your footage on a schedule and get a steady flow of polished
+          short-form videos, all cut in one consistent style.</p>
+        <div class="grid g4">
+          <div class="tile"><i>01</i>
+            <h3>Batch Editing</h3>
+            <p>Send several clips at once and get them back edited together as a set.</p>
+          </div>
+          <div class="tile"><i>02</i>
+            <h3>One Consistent Look</h3>
+            <p>Captions, colour, pacing and sound that match your brand across every video.</p>
+          </div>
+          <div class="tile"><i>03</i>
+            <h3>Planned Schedule</h3>
+            <p>We agree the number of videos and delivery dates before the month begins.</p>
+          </div>
+          <div class="tile"><i>04</i>
+            <h3>Clear Review Process</h3>
+            <p>Revisions are handled within the scope we agree for each project.</p>
+          </div>
+        </div>
+        <div class="chips">
+          <span>Coaches</span><span>Founders</span><span>Agencies</span><span>Creators</span><span>Podcast teams</span>
+        </div>
+        <div class="row" style="margin-top:32px"><a class="btn p" href="#contact" data-pt="Monthly Editing"
+            data-pk="Custom Quote">Request a Monthly Plan</a></div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="w">
+        <h2>Simple Process. Professional Delivery.</h2>
+        <p class="lead">Four clear steps from footage to final file.</p>
+        <ol class="steps">
+          <li>
+            <h3>Share Your Footage</h3>
+            <p>The client shares footage, references, goals, and brand guidelines.</p>
+          </li>
+          <li>
+            <h3>Editing &amp; Refinement</h3>
+            <p>I edit the content according to the agreed brief and style.</p>
+          </li>
+          <li>
+            <h3>Review &amp; Revisions</h3>
+            <p>The client reviews the edit and requests changes within the agreed revision scope.</p>
+          </li>
+          <li>
+            <h3>Final Delivery</h3>
+            <p>The approved video is delivered in the agreed format, ready for publishing.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="alt" id="about">
+      <div class="w about">
+        <div class="pf">
+  <img
+    src="images/my photo.png"
+    alt="Garv Edits profile photo"
+    class="profile-photo"
+  >
+</div>
+        <div>
+          <h2 style="max-width:20ch">Your Editing Partner for Short-Form Content.</h2>
+          <p>Garv Edits focuses on turning raw footage into polished short-form videos for creators, brands, and
+            agencies.</p>
+          <p>Every edit starts with your goals and your brand. I pay close attention to pacing and detail, with clean
+            captions and sound, so the finished video feels intentional and suits your audience.</p>
+          <p>I keep communication clear and projects organised, and I'm open to ongoing collaboration with agencies that
+            need a reliable editing partner.</p>
+          <ul class="chk" style="margin:20px 0 24px">
+            <li>Attention to pacing and detail</li>
+            <li>Clean captions and sound</li>
+            <li>Editing tailored to each brand</li>
+            <li>Consistent communication</li>
+            <li>Open to ongoing agency collaboration</li>
+          </ul>
+          <a class="btn p" href="#contact">Let's Work Together</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="eng" id="why">
+      <div class="w">
+        <h2>Why Work With Garv Edits?</h2>
+        <p class="lead">Practical reasons clients and agencies work with me.</p>
+        <div class="grid g3">
+          <div class="tile">
+            <h3>Tailored Editing</h3>
+            <p>Edits shaped around your content and audience.</p>
+          </div>
+          <div class="tile">
+            <h3>Consistent Style</h3>
+            <p>A steady visual style across videos.</p>
+          </div>
+          <div class="tile">
+            <h3>Clear Communication</h3>
+            <p>You always know where your project stands.</p>
+          </div>
+          <div class="tile">
+            <h3>Organised Delivery</h3>
+            <p>Files, versions and deadlines kept in order.</p>
+          </div>
+          <div class="tile">
+            <h3>Recurring Support</h3>
+            <p>Editing support for ongoing content needs.</p>
+          </div>
+          <div class="tile">
+            <h3>Small Trial Project</h3>
+            <p>Happy to discuss a small trial before a bigger commitment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="w">
+        <h2>Client Feedback</h2>
+        <p class="lead">Words from clients I've worked with.</p>
+        <div class="car">
+          <div class="tr" id="tr" tabindex="0" aria-label="Testimonials, scroll sideways on mobile"></div>
+          <div class="ctl"><button id="pv" aria-label="Previous testimonial">←</button><button id="nx"
+              aria-label="Next testimonial">→</button></div>
+        </div>
+        <button class="btn" id="ta" aria-expanded="false" aria-controls="tr">Show all reviews</button>
+
+      </div>
+    </section>
+
+    <section class="alt" id="faqs">
+      <div class="w">
+        <h2>Questions Before We Start?</h2>
+        <div id="fq" style="max-width:820px;margin-top:32px"></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="w cg">
+        <div>
+          <h2>Let's Talk.</h2>
+          <p class="lead" style="margin-bottom:0">Share a few details about your footage and goals, and I'll reply with
+            next steps.</p>
+          <div class="ci" id="ci"></div>
+        </div>
+        <form id="f" novalidate>
+          <div class="f"><label for="n">Name *</label><input id="n" name="name" required autocomplete="name"></div>
+          <div class="f"><label for="e">Email *</label><input id="e" name="email" type="email" required
+              autocomplete="email"></div>
+          <div class="f full"><label for="b">Business or brand name (optional)</label><input id="b" name="brand"></div>
+          <div class="f"><label for="pt">Project type *</label><select id="pt" name="project_type" required>
+              <option value="">Select…</option>
+              <option>Talking-Head Reels</option>
+              <option>Podcast Clips</option>
+              <option>Invitation Video</option>
+              <option>Influencer Reel</option>
+              <option>Social Media Content</option>
+              <option>Social Media Ad / Promo</option>
+              <option>Agency / White-Label Work</option>
+              <option>Monthly Editing</option>
+              <option>Other</option>
+            </select></div>
+          <div class="f"><label for="pk">Desired package</label><select id="pk" name="package">
+              <option value="">Not sure yet</option>
+              <option>Basic — $50</option>
+              <option>Standard — $89</option>
+              <option>Advanced — $150</option>
+              <option>Custom Quote</option>
+            </select></div>
+          <div class="f"><label for="d">Estimated video duration</label><input id="d" name="duration"
+              placeholder="e.g. 45 seconds"></div>
+          <div class="f"><label for="c">Number of videos</label><input id="c" name="count" type="number" min="1"
+              placeholder="1"></div>
+          <div class="f"><label for="bu">Project budget</label><input id="bu" name="budget"
+              placeholder="e.g. $100 per video"></div>
+          <div class="f"><label for="dl">Preferred deadline</label><input id="dl" name="deadline" type="date"></div>
+          <div class="f full"><label for="ds">Project description *</label><textarea id="ds" name="description"
+              required></textarea></div>
+          <div class="f full"><label for="rf">Reference link (optional)</label><input id="rf" name="reference"
+              type="url" placeholder="https://"></div>
+          <button class="btn p" type="submit" style="grid-column:1/-1">Send Project Enquiry</button>
+          <div class="st" id="st" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="fin" id="final">
+      <div class="w">
+        <h2>Have Footage Ready?</h2>
+        <p>Let's discuss your next video project.</p>
+        <div class="row"><a class="btn p" href="mailto:workwithgarvittt@gmail.com">Email Garv Edits</a><a class="btn"
+            href="#portfolio">View Portfolio</a><a class="btn" href="https://www.instagram.com/garv_edits/"
+            target="_blank" rel="noopener">Instagram</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="w">
+      <div class="fg">
+        <div><a class="logo" href="#home" style="color:var(--tx)">GARV <b>EDITS</b></a>
+          <p style="margin-top:12px;max-width:34ch">Short-form video editing for creators, brands and agencies.</p>
+        </div>
+        <div>
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#portfolio">Work</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#how">Process</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Talking-Head Editing</a></li>
+            <li><a href="#services">Podcast Clips</a></li>
+            <li><a href="#services">Social Media Content</a></li>
+            <li><a href="#services">White-Label Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul id="fc">
+            <li><a href="#contact">Project enquiry form</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copy">© <span id="yr"></span> GARV EDITS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <dialog id="dlg" aria-labelledby="dt"><button class="x" id="dx">Close</button>
+    <h3 id="dt"></h3>
+    <div id="dm"></div>
+    <div class="mr"><label for="uf">Replace with your MP4</label><input type="file" id="uf" accept="video/mp4,video/*">
+      <label for="uu">…or paste a video URL (.mp4)</label><input type="url" id="uu"
+        placeholder="https://…/video.mp4"><button class="btn p sm" id="us" type="button">Use this video</button>
+      <p style="color:var(--mu)">Uploads here only preview in your browser. To make them permanent, set the video URL in
+        the PROJECTS array (the <code>src</code> field) in the code.</p>
+    </div>
+  </dialog>
+
+  <script>
+    /* ===== EDIT ME ===== */
+    const CONFIG = {
+      showPricing: true,    // false hides the whole pricing section
+
+      email: "workwithgarvittt@gmail.com",            // e.g. "hello@yourdomain.com"  → [ADD YOUR BUSINESS EMAIL]
+      instagram: "https://www.instagram.com/garv_edits/",        // e.g. "https://instagram.com/yourhandle" → [ADD YOUR INSTAGRAM URL]
+      website: "",          // [CURRENT WEBSITE URL]
+      formEndpoint: ""      // Optional: Formspree/Getform URL for real form submission
+    };
+    const PROJECTS = [ // src: set to an MP4 URL to replace a placeholder.
+      { c: "Talking-Head Videos", t: "Talking Head 1", d: "Portfolio concept: clean cuts, animated captions and strategic zooms.", tags: ["Portfolio concept", "Captions"], dur: "0:30", src: "videos/Talking Head 1.mp4", c1: "#8B5CF6", c2: "#12121A" },
+      { c: "Podcast Clips", t: "Podcast Clip 1", d: "Portfolio concept: speaker framing and subtitles.", tags: ["Portfolio concept", "Subtitles"], dur: "0:45", src: "videos/PODCAST 1.mp4", c1: "#8B5CF6", c2: "#3B82F6" },
+      { c: "Podcast Clips", t: "Podcast Clip 2", d: "Portfolio concept: clip selection and audio cleanup.", tags: ["Portfolio concept", "Audio"], dur: "0:50", src: "videos/PODCAST 2.mp4", c1: "#A855F7", c2: "#12121A" },
+      { c: "Invitation Clips", t: "Invitation Clip 1", d: "Portfolio concept: animated names, photos and event details.", tags: ["Portfolio concept", "Typography"], dur: "0:40", src: "videos/Invation 1.mp4", c1: "#A855F7", c2: "#3B82F6" },
+      { c: "Invitation Clips", t: "Invitation Clip 2", d: "Portfolio concept: music-synced photo transitions.", tags: ["Portfolio concept", "Music sync"], dur: "0:45", src: "videos/Invation 2.mp4", c1: "#8B5CF6", c2: "#A855F7" },
+      { c: "Invitation Clips", t: "Invitation Clip 3", d: "Portfolio concept: elegant date reveal and animation.", tags: ["Portfolio concept", "Animation"], dur: "0:35", src: "videos/invation 3.mp4", c1: "#3B82F6", c2: "#12121A" },
+      
+    ];
+    const TESTIMONIALS = [ // only add real, approved reviews. Empty list hides the section. Optional s:5 or s:4 only if the rating is confirmed.
+      { q: "It's great working with you, Garv.", n: "Farenhiet Gym" },
+      { q: "It's perfect to have an editor like you.", n: "Trendy Trails" }];
+    /* ==================== */
+    const $ = s => document.querySelector(s), esc = s => String(s).replace(/[&<>"]/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[m]));
+    const HERO = { c: "Featured", t: "Featured Edit", src: "", c1: "#7C3AED", c2: "#3B82F6", d: "", tags: [] };
+    const items = [HERO, ...PROJECTS]; const ids = new Map(); items.forEach((p, i) => { p.id = i ? "p" + (i - 1) : "hero"; ids.set(p.id, p) });
+    function thumb(p, label) { return p.src ? `<video src="${esc(p.src)}#t=0.5" preload="metadata" muted playsinline></video><span class="pl"></span>` : `<span class="th" style="--c1:${p.c1};--c2:${p.c2}"><small>${label}</small></span><span class="pl"></span>` }
+    $("#hv").innerHTML = thumb(HERO, "FEATURED EDIT — REPLACE WITH YOUR VIDEO");
+    const cats = ["All Work", ...new Set(PROJECTS.map(p => p.c))];
+    let cur = "All Work";
+    function render() {
+      $("#tabs").innerHTML = cats.map(c => `<button aria-pressed="${c === cur}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+      $("#pg").innerHTML = PROJECTS.map((p, i) => ({ p, i })).filter(x => cur === "All Work" || x.p.c === cur).map(({ p, i }) => `<article class="card"><button class="vid" data-id="p${i}" aria-label="Play ${esc(p.t)}">${thumb(p, "REPLACE: video " + (i + 1))}${p.dur ? `<span class="dur">${esc(p.dur)}</span>` : ""}</button><span class="cat">${esc(p.c)}</span><h3>${esc(p.t)}</h3><p>${esc(p.d)}</p><div class="tags">${p.tags.map(t => `<span>${esc(t)}</span>`).join("")}</div></article>`).join("");
+    }
+    render();
+    $("#tabs").onclick = e => { const b = e.target.closest("button"); if (b) { cur = b.dataset.c; render() } };
+    /* Modal */
+    const dlg = $("#dlg"); let active = null;
+    function open(id) { active = ids.get(id); $("#dt").textContent = active.t; showVid(); $("#uu").value = ""; $("#uf").value = ""; dlg.showModal() }
+    function showVid() { $("#dm").innerHTML = active.src ? `<video controls playsinline src="${esc(active.src)}"></video>` : `<div class="ph">PLACEHOLDER — no video yet.<br>Upload an MP4 or paste a URL below to replace it.</div>` }
+document.addEventListener("click", e => {
+  const cardButton = e.target.closest("#pg .vid, #rail .vid, #hv");
+
+  if (!cardButton) return;
+
+  const videoId = cardButton.dataset.id;
+  const videoData = ids.get(videoId);
+
+  if (!videoData || !videoData.src) return;
+
+  // Find an existing video inside this card
+  let video = cardButton.querySelector("video");
+
+  // Replace the thumbnail with a video player if needed
+  if (!video) {
+    cardButton.innerHTML = `
+      <video
+        src="${esc(videoData.src)}"
+        controls
+        playsinline
+        preload="metadata"
+        style="width:100%;height:100%;object-fit:contain;background:#000;"
+      ></video>
+    `;
+
+    video = cardButton.querySelector("video");
+  }
+
+  // Clicking the player controls should work normally
+  if (e.target.closest("video")) return;
+
+  video.controls = true;
+  video.play().catch(err => console.log("Video playback:", err));
+});    $("#dx").onclick = () => { dlg.querySelectorAll("video").forEach(v => v.pause()); dlg.close() };
+    dlg.addEventListener("close", () => { dlg.querySelectorAll("video").forEach(v => v.pause()) });
+    dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close() });
+    function setSrc(u) { active.src = u; showVid(); if (active.id === "hero") $("#hv").innerHTML = thumb(HERO, ""); else render() }
+    $("#uf").onchange = e => { const f = e.target.files[0]; if (f) setSrc(URL.createObjectURL(f)) };
+    $("#us").onclick = () => { const u = $("#uu").value.trim(); if (/^https?:\/\//i.test(u)) setSrc(u); else $("#uu").focus() };
+    /* Services */
+    const SV = [["Talking-Head Video Editing", "Clean, well-paced edits for creators, coaches and personal brands.", ["Clean jump cuts", "Animated captions", "Strategic zooms", "B-roll integration", "Strong pacing"], "Creators, coaches, consultants and personal brands.", "Talking-Head Reels"],
+    ["Podcast Clip Editing", "Turn long conversations into short, shareable clips.", ["Short-form clip selection", "Speaker framing", "Subtitles and captions", "Audio cleanup", "Visual emphasis"], "Podcasters and podcast production agencies.", "Podcast Clips"],
+    ["Social Media Content", "Short-form edits shaped for the platform they're published on.", ["Instagram Reels", "YouTube Shorts", "Promotional videos", "Brand content", "Short-form storytelling"], "Brands, creators and social media teams.", "Social Media Content"],
+    ["White-Label Agency Support", "Dependable editing support that fits into your agency workflow.", ["Reliable editing support for agencies", "Consistent editing styles", "Batch content production", "Brand-specific workflows", "Clear communication and agreed deadlines"], "Social, digital and podcast agencies.", "Agency / White-Label Work"]];
+    $("#sv").innerHTML = SV.map((s, i) => `<article class="svc"><span class="cat" style="color:var(--pur2);font-weight:600;font-size:13px">Service ${i + 1}</span><h3>${s[0]}</h3><p>${s[1]}</p><ul class="chk">${s[2].map(x => `<li>${x}</li>`).join("")}</ul><p class="ideal"><strong>Ideal for:</strong> ${s[3]}</p><a class="btn" href="#contact" data-pt="${s[4]}">Discuss This Service</a></article>`).join("");
+    /* Pricing */
+    const PR = [["Basic", 50, "For straightforward short-form editing.", ["Straightforward short-form edits"], "Basic — $50", "Request a Quote"],
+    ["Standard", 89, "For more detailed editing with captions and B-roll.", ["Detailed editing", "Captions and B-roll"], "Standard — $89", "Request a Quote", 1],
+    ["Advanced", 150, "For complex edits involving additional motion graphics, sound design, or ad-style production.", ["Complex edits", "Motion graphics", "Sound design", "Ad-style production"], "Advanced — $150", "Request a Quote"]];
+    $("#pr").innerHTML = PR.map(p => `<article class="price${p[6] ? " pop" : ""}">${p[6] ? '<span class="badge">MOST POPULAR</span>' : ""}<h3>${p[0]}</h3><div class="amt">$${p[1]} <small>starting price (USD)</small></div><p style="color:var(--mu)">${p[2]}</p><ul class="chk">${p[3].map(x => `<li>${x}</li>`).join("")}</ul><a class="btn ${p[6] ? "p" : ""}" href="#contact" data-pk="${p[4]}">${p[5]}</a></article>`).join("");
+    document.addEventListener("click", e => { const a = e.target.closest("[data-pk],[data-pt]"); if (!a) return; if (a.dataset.pk) $("#pk").value = a.dataset.pk; if (a.dataset.pt) $("#pt").value = a.dataset.pt });
+    /* Testimonials */
+    $("#tr").innerHTML = TESTIMONIALS.map(t => `<figure class="tc">${t.s ? `<div class="stars" role="img" aria-label="${t.s} out of 5 stars">${"★".repeat(t.s)}${"☆".repeat(5 - t.s)}</div>` : ""}<q>${esc(t.q)}</q><figcaption><strong>${esc(t.n || "Client Feedback")}</strong></figcaption></figure>`).join("");
+    $("#ta").onclick = () => { const a = $("#tr").classList.toggle("all"); $("#ta").setAttribute("aria-expanded", a); $("#ta").textContent = a ? "Show fewer reviews" : "Show all reviews" };
+    const sc = d => $("#tr").scrollBy({ left: d * ($("#tr").firstChild.offsetWidth + 20), behavior: "smooth" });
+    $("#pv").onclick = () => sc(-1); $("#nx").onclick = () => sc(1);
+    /* FAQ */
+    const FQ = [["What types of videos do you edit?", "Short-form content: Instagram Reels, YouTube Shorts, talking-head videos, podcast clips, storytelling edits and social media ad concepts."], ["Do you work with international clients?", "Yes. I work with clients in the UK, the USA and elsewhere. We agree communication and delivery timings that suit your time zone."], ["Can you support agencies with recurring editing work?", "Yes. I can support agencies with recurring and batch editing in a consistent style. Scope and availability are agreed upfront."], ["Can I request a sample edit?", "A limited sample can be discussed depending on the brief, available footage and scope. It isn't guaranteed for every project."], ["How do revisions work?", "Revisions are agreed based on project scope. You review the edit and send consolidated feedback, and I refine it within the agreed revision rounds."], ["What is your typical turnaround time?", "It depends on footage length, complexity and my current workload, so it is confirmed once I've seen your project. I don't promise a delivery date before then."], ["How do I get started?", "Send your footage, references and goals through the contact form or email workwithgarvittt@gmail.com. I'll review them and confirm scope, price and next steps."]];
+    $("#fq").innerHTML = FQ.map(q => `<details><summary>${q[0]}</summary><p>${q[1]}</p></details>`).join("");
+    /* Contact links */
+    const ci = [];
+    ci.push(CONFIG.email ? `<span>Email: <a href="mailto:${esc(CONFIG.email)}">${esc(CONFIG.email)}</a></span>` : `<span>Email: [ADD YOUR BUSINESS EMAIL]</span>`);
+    ci.push(CONFIG.instagram ? `<span>Instagram: <a href="${esc(CONFIG.instagram)}" target="_blank" rel="noopener">${esc(CONFIG.instagram)}</a></span>` : `<span>Instagram: [ADD YOUR INSTAGRAM URL]</span>`);
+    $("#ci").innerHTML = ci.join("");
+    if (CONFIG.email) $("#fc").insertAdjacentHTML("beforeend", `<li><a href="mailto:${esc(CONFIG.email)}">${esc(CONFIG.email)}</a></li>`);
+    if (CONFIG.instagram) $("#fc").insertAdjacentHTML("beforeend", `<li><a href="${esc(CONFIG.instagram)}" target="_blank" rel="noopener">Instagram</a></li>`);
+    $("#yr").textContent = new Date().getFullYear();
+    /* Form */
+    const st = (c, m) => { $("#st").className = "st " + c; $("#st").textContent = m };
+    $("#f").addEventListener("submit", async e => {
+      e.preventDefault(); const f = e.target;
+      const bad = [...f.querySelectorAll("[required]")].find(i => !i.value.trim());
+      if (bad) { st("er", "Please fill in the required fields: name, email, project type and project description."); bad.focus(); return }
+      if (!f.email.validity.valid) { st("er", "Enter a valid email address."); f.email.focus(); return }
+      if (f.reference.value && !f.reference.validity.valid) { st("er", "Reference link must start with https://"); return }
+      const data = Object.fromEntries(new FormData(f));
+      if (CONFIG.formEndpoint) {
+        try {
+          const r = await fetch(CONFIG.formEndpoint, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) });
+          if (!r.ok) throw 0; st("ok", "Thanks — your enquiry was sent. I'll reply with scope, pricing and next steps."); f.reset()
+        }
+        catch { st("er", "The enquiry could not be sent. Please try again or email directly" + (CONFIG.email ? " at " + CONFIG.email : "") + ".") }
+      } else if (CONFIG.email) {
+        const body = Object.entries(data).filter(x => x[1]).map(x => x[0] + ": " + x[1]).join("\n");
+        location.href = "mailto:" + CONFIG.email + "?subject=" + encodeURIComponent("Project enquiry — " + data.project_type) + "&body=" + encodeURIComponent(body);
+        st("ok", "Your email app should open with the enquiry filled in. Press send there to complete it — nothing has been sent yet.");
+      } else st("er", "This form isn't connected yet, so nothing was sent. The site owner needs to add an email or form endpoint in CONFIG.");
+    });
+    /* Nav */
+    const mb = $("#mb"), nav = $("#nav");
+    mb.onclick = () => { const o = nav.classList.toggle("open"); mb.setAttribute("aria-expanded", o); mb.textContent = o ? "✕" : "☰" };
+    nav.addEventListener("click", e => { if (e.target.closest("a")) { nav.classList.remove("open"); mb.setAttribute("aria-expanded", "false"); mb.textContent = "☰" } });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && nav.classList.contains("open")) { nav.classList.remove("open"); mb.focus() } });
+    const links = [...nav.querySelectorAll("a:not(.btn)")];
+    const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + x.target.id)) }), { rootMargin: "-45% 0px -50% 0px" });
+    ["home", "portfolio", "services", "how", "about", "faqs", "contact"].forEach(i => io.observe(document.getElementById(i)));
+    /* floating buttons: appear after scrolling, hide on the contact form */
+    const fab = $("#fab"), cs = $("#contact"); addEventListener("scroll", () => { const r = cs.getBoundingClientRect(); fab.classList.toggle("show", scrollY > 700 && !(r.top < innerHeight * .5 && r.bottom > 0)) }, { passive: true });
+    /* before/after slider + settings */
+    if (!CONFIG.showPricing) $("#pricing").style.display = "none";
+    if (!TESTIMONIALS.length) $("#testimonials").style.display = "none";
+    if (TESTIMONIALS.length <= 6) $("#ta").style.display = "none";
+    /* reels rail: same videos as the portfolio */
+    function renderRail() { $("#rail").innerHTML = PROJECTS.map((p, i) => `<div class="rc"><button class="vid" data-id="p${i}" aria-label="Play ${esc(p.t)}">${thumb(p, "REPLACE: video " + (i + 1))}${p.dur ? `<span class="dur">${esc(p.dur)}</span>` : ""}</button><span class="cat">${esc(p.c)}</span><h3>${esc(p.t)}</h3></div>`).join("") }
+    renderRail(); dlg.addEventListener("close", renderRail);
+    /* ===== Animations & cursor ===== */
+    const rm = matchMedia("(prefers-reduced-motion:reduce)").matches;
+    /* scroll progress */
+    const pg = $("#prog"); addEventListener("scroll", () => { pg.style.transform = `scaleX(${scrollY / (document.documentElement.scrollHeight - innerHeight || 1)})` }, { passive: true });
+    /* reveal on scroll */
+    if (!rm) {
+      const ro = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in"); ro.unobserve(x.target) } }), { threshold: .12 });
+      document.querySelectorAll("section:not(.hero) h2,.lead,.tabs,.svc,.price,.steps li,.tc,details,.cta,.about>*,.cg>*,.notes").forEach((el, i) => { el.classList.add("rv"); el.style.transitionDelay = (i % 4) * 70 + "ms"; ro.observe(el) })
+    }
+    /* custom cursor */
+    if (matchMedia("(hover:hover) and (pointer:fine)").matches && !rm) {
+      const cd = $("#cd"), cr = $("#cr"); let mx = -100, my = -100, rx = -100, ry = -100;
+      document.body.classList.add("cur");
+      addEventListener("mousemove", e => { mx = e.clientX; my = e.clientY; cd.style.transform = `translate(${mx}px,${my}px)` }, { passive: true });
+      (function loop() { rx += (mx - rx) * .16; ry += (my - ry) * .16; cr.style.transform = `translate(${rx}px,${ry}px)`; requestAnimationFrame(loop) })();
+      document.addEventListener("mouseover", e => {
+        const t = e.target; const v = t.closest && t.closest(".vid");
+        cr.className = v ? "play" : (t.closest && t.closest("a,button,summary,.tabs button,input,select,textarea")) ? "hov" : ""; cr.textContent = v ? "PLAY" : ""
+      });
+      document.addEventListener("mousedown", () => cr.classList.add("dn")); document.addEventListener("mouseup", () => cr.classList.remove("dn"));
+      document.addEventListener("mouseleave", () => { cr.style.opacity = 0; cd.style.opacity = 0 }); document.addEventListener("mouseenter", () => { cr.style.opacity = 1; cd.style.opacity = 1 });
+      /* the modal sits above the cursor layer, so restore the native cursor while it is open */
+      new MutationObserver(() => document.body.classList.toggle("cur", !dlg.open)).observe(dlg, { attributes: true, attributeFilter: ["open"] });
+      /* magnetic buttons + card tilt */
+      document.addEventListener("mousemove", e => {
+        const b = e.target.closest && e.target.closest(".btn");
+        document.querySelectorAll(".btn").forEach(x => { if (x !== b) x.style.translate = "" });
+        if (b) { const r = b.getBoundingClientRect(); b.style.translate = `${(e.clientX - r.left - r.width / 2) * .15}px ${(e.clientY - r.top - r.height / 2) * .25}px` }
+        const c = e.target.closest && e.target.closest(".hero-v");
+        if (c) { const r = c.getBoundingClientRect(); c.style.transform = `perspective(900px) rotateY(${((e.clientX - r.left) / r.width - .5) * 8}deg) rotateX(${-((e.clientY - r.top) / r.height - .5) * 8}deg)` } else $("#hv").style.transform = ""
+      }, { passive: true });
+    }
+  </script>
+</body>
+
+</html>
